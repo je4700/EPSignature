@@ -161,17 +161,17 @@ open class EPSignatureViewController: UIViewController {
         let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertController.Style.actionSheet)
         action.view.tintColor = tintColor
         
-        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertActionStyle.default, handler: { action in
+        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertAction.Style.default, handler: { action in
             let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
             let filePath = (docPath! as NSString).appendingPathComponent("sig.data")
             self.signatureView.loadSignature(filePath)
         }))
         
-        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertActionStyle.destructive, handler: { action in
+        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertAction.Style.destructive, handler: { action in
             self.signatureView.removeSignature()
         }))
         
-        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         
         if let popOver = action.popoverPresentationController {
             popOver.barButtonItem = barButton
