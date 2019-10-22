@@ -31,6 +31,6 @@ extension UIViewController {
 
 extension UIColor {
     class func defaultTintColor() -> UIColor {
-        return UIColor(red: (233/255), green: (159/255), blue: (94/255), alpha: 1.0)
+        return UIColor(red: (0/255), green: (150/255), blue: (136/255), alpha: 1.0)
     }
 }
