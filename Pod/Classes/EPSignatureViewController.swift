@@ -38,6 +38,43 @@ open class EPSignatureViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        let arrowImageName = "arrow.png"
+        let arrowImage = UIImage(named: arrowImageName)
+        let imageView = UIImageView(image: arrowImage!)
+        // imageView.frame = CGRect(x: 305, y: 450, width: 158, height: 220)
+        imageView.frame = CGRect(x: 0, y: 0, width: 158, height: 220)
+        view.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([
+                imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        } else {
+            // Fallback on earlier versions
+            print("error with arrow imageview constraints")
+        }
+        
+        let pleaseSignNote = "pleaseSignBelow.png"
+        let pleaseSignImage = UIImage(named: pleaseSignNote)
+        let pleaseSignImageView = UIImageView(image: pleaseSignImage!)
+        // pleaseSignImageView.frame = CGRect(x: 97, y: 233, width: 574, height: 225)
+        pleaseSignImageView.frame = CGRect(x: 0, y: 0, width: 574, height: 225)
+        view.addSubview(pleaseSignImageView)
+        pleaseSignImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([
+                pleaseSignImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                pleaseSignImageView.bottomAnchor.constraint(equalTo: imageView.topAnchor, constant: 25.0)
+                
+            ])
+        } else {
+            // Fallback on earlier versions
+            print("error with arrow imageview constraints")
+        }
+        
 
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
         cancelButton.tintColor = tintColor
