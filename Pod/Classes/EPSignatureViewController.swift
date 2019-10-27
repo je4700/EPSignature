@@ -39,7 +39,7 @@ open class EPSignatureViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        viewMargin.layer.borderWidth = 4
+        viewMargin.layer.borderWidth = 2
         viewMargin.layer.borderColor = UIColor.gray.cgColor
         
         let arrowImageName = "arrow.png"
