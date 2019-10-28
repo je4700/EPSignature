@@ -47,7 +47,7 @@ open class EPSignatureViewController: UIViewController {
         let arrowImage = UIImage(named: arrowImageName)
         let imageView = UIImageView(image: arrowImage!)
         // imageView.frame = CGRect(x: 305, y: 450, width: 158, height: 220)
-        imageView.frame = CGRect(x: 0, y: 0, width: 158, height: 220)
+        imageView.frame = CGRect(x: 0, y: 0, width: 126, height: 176)
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 11.0, *) {
