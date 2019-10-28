@@ -41,6 +41,7 @@ open class EPSignatureViewController: UIViewController {
         
         viewMargin.layer.borderWidth = 2
         viewMargin.layer.borderColor = UIColor.gray.cgColor
+        viewMargin.layer.cornerRadius = 15
         
         let arrowImageName = "arrow.png"
         let arrowImage = UIImage(named: arrowImageName)
